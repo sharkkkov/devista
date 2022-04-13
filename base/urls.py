@@ -1,7 +1,7 @@
 """URL routing for base app"""
 
 from django.urls import path
-from .views import IndexView, InteriorsView, InteriorView, AboutUsView,MediaView
+from .views import IndexView, InteriorsView, InteriorView, AboutUsView, MediaView
 from django.conf import settings
 from django.conf.urls.static import static
 

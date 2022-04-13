@@ -12,7 +12,7 @@ class Post(models.Model):
 
 class PostImage(models.Model):
     post = models.ForeignKey(Post, default=None, on_delete=models.CASCADE)
-    images = models.FileField(upload_to='images/')
+    images = models.FileField(upload_to="images/")
 
     def __str__(self):
         return self.post.title
