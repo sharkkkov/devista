@@ -114,7 +114,7 @@ hr {
 
 .list-group-item-check:checked + .list-group-item {
     color: #fff;
-    background-color: var(--bs-blue);
+    background-color: var(--bs-gray);
 }
 
 .list-group-item-check[disabled] + .list-group-item,

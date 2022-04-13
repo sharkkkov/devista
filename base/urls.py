@@ -20,4 +20,6 @@ urlpatterns = [
     path("interior/<int:pk>/", InteriorView.as_view(), name="interior"),
     path("contacts/", ContactsView.as_view(), name="contacts"),
     path("references/", ReferncesViev.as_view(), name="references"),
+    path("about/", AboutUsView.as_view(), name="about"),
+    path("media/", MediaView.as_view(), name="media"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
