@@ -1,0 +1,40 @@
+{% extends 'base/main.html'%}
+{% block content%}
+
+    <div class="container-fluid photo-container mt-3">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+{#                  <div class="carousel-indicators">#}
+{#                      {% for p in photos %}#}
+{#                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ forloop.counter0 }}"></button>#}
+{#                      {% endfor %}#}
+{#                  </div>#}
+                    <ol class="carousel-indicators">
+                        {% for p in photos %}
+                            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ forloop.counter0 }}" class="active"></li>
+                        {% endfor %}
+                    </ol>
+                  <div class="carousel-inner">
+                      {% for p in photos %}
+                          <div class="carousel-item {% if forloop.counter0 == 0 %}active{% endif %}">
+                              <img class="d-block w-100" src="{{p.images.url}}" alt="slide">
+                          </div>
+                      {% endfor %}
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock content%}

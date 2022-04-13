@@ -1,0 +1,26 @@
+{% extends 'base/main.html'%}
+{% block content%}
+{% load static %}
+<div class="container-fluid photo-container mt-3">
+    <div class="row interier-item">
+        <div class="col-4">
+            <img src="{% static '1.JPG' %}" class="rounded float-left img-fluid" alt="...">
+        </div>
+        <div class="col-8 text-center position-relative">
+            <p class="text-uppercase position-absolute top-50 start-50 translate-middle text-nowrap"> 
+                JONAS: THE ART OF FINE UPHOLSTERY
+                <a href="https://www.elledecoration.ru/interior/flats/moskovskaya-kvartira-s-kaminom-v-prirodnoi-gamme/">ссылка</a>
+            </p>
+        </div>
+    </div>  
+    <div class="row interier-item">
+        <div class="col-8">
+            
+        </div>
+        <div class="col-4">
+            <img src="{% static '1.JPG' %}" class="rounded float-left img-fluid" alt="...">
+        </div>
+    </div>   
+</div>
+
+{% endblock content%}

@@ -1,0 +1,57 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+
+{% load static %}
+<div class="container-fluid mt-4 header-container interiers-conteiner">
+    <div class="row">
+
+        {% for post in posts %}
+            <div class="col-md-3 col-6 center-block interier-item">
+                <a href="{% url 'interior' post.id %}">
+                    <img src="{{post.image.url}}" alt="" class="img-fluid">
+                </a>
+            </div>
+        {% endfor %}
+
+
+{#        <div class="col-md-3 col-6 center-block interier-item">#}
+{#            <a href="">#}
+{#                <img src="../../static/interiors/DSC_8380-Edit.jpg" alt="" class="img-fluid">#}
+{#            </a>#}
+{#        </div>#}
+{#        <div class="col-md-3 col-6 center-block interier-item">#}
+{#            <a href="">#}
+{#                <img src="../../static/interiors/DSC_8380-Edit.jpg" alt="" class="img-fluid">#}
+{#            </a>#}
+{#        </div>#}
+{#        <div class="col-md-3 col-6 center-block interier-item">#}
+{#            <a href="">#}
+{#                <img src="../../static/interiors/DSC_8380-Edit.jpg" alt="" class="img-fluid">#}
+{#            </a>#}
+{#        </div>#}
+    </div>
+{#    <div class="row">#}
+{#        <div class="col-md-3 col-6 center-block interier-item">#}
+{#            <a href="">#}
+{#                <img src="../../static/interiors/DSC_8380-Edit.jpg" alt="" class="img-fluid">#}
+{#            </a>#}
+{#        </div>#}
+{#        <div class="col-md-3 col-6 center-block interier-item">#}
+{#            <a href="">#}
+{#                <img src="../../static/interiors/DSC_8380-Edit.jpg" alt="" class="img-fluid">#}
+{#            </a>#}
+{#        </div>#}
+{#        <div class="col-md-3 col-6 center-block interier-item">#}
+{#            <a href="">#}
+{#                <img src="../../static/interiors/DSC_8380-Edit.jpg" alt="" class="img-fluid">#}
+{#            </a>#}
+{#        </div>#}
+{#        <div class="col-md-3 col-6 center-block interier-item">#}
+{#            <a href="">#}
+{#                <img src="../../static/interiors/DSC_8380-Edit.jpg" alt="" class="img-fluid">#}
+{#            </a>#}
+{#        </div>#}
+{#    </div>#}
+</div>
+{% endblock content %}  
