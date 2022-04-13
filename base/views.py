@@ -2,7 +2,7 @@ from re import template
 from django.shortcuts import render
 from django.views.generic import TemplateView, ListView, DetailView
 
-from base.models import Post, PostImage
+from base.models import Post, PostImage, Reference
 
 
 class IndexView(TemplateView):
@@ -29,8 +29,11 @@ class InteriorView(DetailView):
         # print(photos[0].images.url)
         return context
 
-class AboutUsView(TemplateView):
-    template_name = "base/aboutus.html"
-    
-class MediaView(TemplateView):
-    template_name = "base/media.html"
+class ContactsView(TemplateView):
+    template_name = "base/contacts.html"
+
+
+class ReferncesViev(ListView):
+    template_name = "base/references.html"
+    model = Reference
+    context_object_name = 'references'

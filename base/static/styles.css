@@ -23,6 +23,7 @@
 .footer-container {
     padding: 0 15%;
 }
+
 #mail-icon {
     float: right;
 }
@@ -49,17 +50,222 @@ ul li:hover {
 .nav-link:hover {
     color: rgb(130, 130, 132) !important;
 }
+
 .interiers-conteiner .row {
     margin-bottom: 0;
 }
+
 .interier-item {
     margin-bottom: 20px;
+}
+
+.opacity-50 {
+    opacity: .5;
+}
+
+.opacity-75 {
+    opacity: .75;
+}
+
+.list-group {
+    width: auto;
+    max-width: 460px;
+    margin: 5px 0px;
+}
+
+hr {
+    margin-top: 30px !important;
+    margin-bottom: 20px !important;
+}
+
+.form-check-input:checked + .form-checked-content {
+    opacity: .5;
+}
+
+.form-check-input-placeholder {
+    pointer-events: none;
+    border-style: dashed;
+}
+
+[contenteditable]:focus {
+    outline: 0;
+}
+
+.list-group-checkable {
+    display: grid;
+    gap: .5rem;
+    border: 0;
+}
+
+.list-group-checkable .list-group-item {
+    cursor: pointer;
+    border-radius: .5rem;
+}
+
+.list-group-item-check {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    pointer-events: none;
+}
+
+.list-group-item-check:hover + .list-group-item {
+    background-color: var(--bs-light);
+}
+
+.list-group-item-check:checked + .list-group-item {
+    color: #fff;
+    background-color: var(--bs-blue);
+}
+
+.list-group-item-check[disabled] + .list-group-item,
+.list-group-item-check:disabled + .list-group-item {
+    pointer-events: none;
+    filter: none;
+    opacity: .5;
+}
+
+a.next-button, a.prev-button {
+	background: #FFF;
+	color: gray;
+	font: bold 11px "Helvetica";
+	padding: 12px;
+	text-decoration: none;
+    max-width: 110px;
+    float: right;
+
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+
+	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, .25);
+	-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, .25);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, .25);
+
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+a.next-button:after{
+    background: gray;
+    color: #FFF;
+    content: ">";
+    display: inline-block;
+    font: bold 11px "Georgia";
+    height: 25px;
+    line-height: 25px;
+    margin-left: 10px;
+    text-align: center;
+    width: 25px;
+
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
+a.prev-button:before {
+    background: gray;
+    color: #FFF;
+    content: "<";
+    display: inline-block;
+    font: bold 11px "Georgia";
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    width: 25px;
+
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
+a.next-button:hover, a.prev-button:hover {
+    -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+a.prev-button {
+    margin-right: 10px;
+}
+
+.test-wrap-2, .test-wrap-3, .test-wrap-4, .test-wrap-5 {
+    display: none;
+}
+
+.test-wrap-1,
+.test-wrap-2,
+.test-wrap-3,
+.test-wrap-4,
+.test-wrap-5 {
+    min-height: 400px;
+    vertical-align: middle;
+}
+
+.test-header {
+    max-height: 50px;
+}
+
+.form-control-range {
+    width: 80%;
+}
+
+.range-div {
+    width: 80%;
+}
+
+@keyframes fromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.card {
+    margin: 0 auto !important;
+}
+
+.img-check {
+    margin-bottom: 20px;
+}
+
+@keyframes fromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 @media (max-width: 768px) {
     #top-quote {
         margin: 20px 0;
     }
-     ul li {
+
+    ul li {
         display: block;
+    }
+
+    .list-group {
+        width: 100%;
+    }
+
+    .test-wrap-1 {
+        padding-left: 10%;
+        padding-right: 10%;
     }
 }

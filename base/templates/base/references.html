@@ -1,0 +1,18 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+
+{% load static %}
+<div class="container-fluid mt-4 header-container interiers-conteiner">
+    <div class="row">
+
+        {% for reference in references %}
+            <div class="col-md-3 col-6 center-block interier-item">
+                    <img src="{{reference.image.url}}" alt="" class="img-fluid">
+            </div>
+        {% endfor %}
+
+    </div>
+
+</div>
+{% endblock content %}
