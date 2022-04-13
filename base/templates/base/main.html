@@ -23,12 +23,13 @@
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
         {% load static %}
         <link rel="stylesheet" href="{% static 'styles.css' %}">
+
     </head>
     <body>
         <div class="container-fluid mt-4 header-container">
             <div class="row">
                 <div class="col-md-4 col-xs-12 text-center">
-                    <img src="{% static 'logotype.png' %}" alt="logo" id="top-logo">
+                    <img src="{% static 'logo.png' %}" alt="logo" id="top-logo">
                 </div>
                 <div class="col-md-8 col-xs-12 text-center d-flex
                     align-items-center">
@@ -44,16 +45,16 @@
                         <a class="nav-link" href="{% url 'interiors' %}">Интерьеры</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Референсы</a>
+                        <a class="nav-link" href="{% url 'references' %}">Референсы</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'aboutus' %}">О нас</a>
+                        <a class="nav-link" href="#">О нас</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'media' %}">Медиа</a>
+                        <a class="nav-link" href="#"">Медиа</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Контакты</a>
+                        <a class="nav-link" href="{% url 'contacts' %}">Контакты</a>
                     </li>
                 </ul>
             </div>
@@ -83,4 +84,5 @@
         </div>
 
     </body>
+<script src="{% static 'base/script.js' %}"></script>
 </html>
